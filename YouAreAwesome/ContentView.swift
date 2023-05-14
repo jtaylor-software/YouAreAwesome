@@ -27,23 +27,19 @@ struct ContentView: View {
       
       Spacer()
       
-      
-      
-      
-      HStack {
-        Button("Awesome") {
-          // Performed when button is pressed
-          messageString = "You Are Awesome!"
-        }
-        .buttonStyle(.borderedProminent)
+      Button("Show Message") {
+        // Performed when button is pressed
+        let message1 = "You Are Awesome!"
+        let message2 = "You Are Great!"
         
-        Spacer()
-        
-        Button("Great") {
-          messageString = "You Are Great!"
+        if messageString == message1 {
+          messageString = message2
+        } else {
+          messageString = message1
         }
-        .buttonStyle(.borderedProminent)
       }
+      .buttonStyle(.borderedProminent)
+      
       .padding()
     }
   }
